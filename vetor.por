@@ -1,20 +1,35 @@
 programa {
+
+  // biblioteca para arredondamento 
+  inclua biblioteca Matematica --> mat
+
   funcao inicio() {
 
-   //Declaraçção do vetor para nomes e variavel de  controle
-   cadeia nomes[5]
+    // declaração do vetor para 5 nomes e variável de controle
+    cadeia nomes [5]
+    real notas [15]
 
-   //Captura os nomes dos 5 alunos
-   para( inteiro i = 0; i < 5; i++ ) { //faça
-    escreva("Digite o nome: ")
-    leia(nomes[i])
-   }
+    // captura os nomes dos 5 alunos
+    para( inteiro i = 0; i < 5; i++ ) { // faça
+      escreva ("Aluno : ")
+      leia (nomes[i])
 
-   escreva("\n ----Lista de Alunos ---\n")
+      para (inteiro j = 0; j < 3; j++){
+        inteiro posicao = (i * 3) +j
+        escreva("Digite a nota: ")
+        leia (notas [ posicao])
 
-   para( inteiro i = 0; i < 5; i++ ) { 
-     escreva("Alunos:",nomes[i],"\n")
-   }
+      }
 
+    }
+
+    escreva("\n-----Lista de Alunos-----\n")
+
+    para( inteiro i = 0; i < 5; i++ ) { 
+      escreva("\nAluno: ", nomes[i])
+
+    }
+
+    
   }
 }
